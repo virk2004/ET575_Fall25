@@ -37,7 +37,7 @@ int main (){
     cout <<"After insert method = "<<msg<<endl;
 
     cout<<"\n----- Example 6:inserting characters to the end of a string----"<<endl;
-    msg.append("---by anter");
+    msg.append("---by 'prof' anter");
     cout<<"After append method = "<<msg<<endl;
 
     cout<<"\n----- Example 7:replace characters in a string -----"<<endl;
@@ -53,30 +53,34 @@ int main (){
     // find method return the index number of the first found or occurance
     // if the word or character was not found , it returns -1
     // find the word 'prof'
-    int index_prof = msg.find(" prof");
+    int index_prof = msg.find("prof") ;
     cout<<"The index of prof = " << index_prof<<endl;
 
     cout<<"\n----- Exercise: ---"<<endl;
     //step1: ask to for "word"
     string word = "";
-    cout<<"Enter a word: ";
+    cout<<"word: ";
 
     cin>>word;
 
     //step2: print 2nd character
-    cout<<" 2ndcharcter = "<<word[2]<<endl;
+    cout<<"2nd character = "<<word[2]<<endl;
 
     //step3: find and print length of the"word"
-    int characters = word.length();
-    cout<<" word has"<<characters<<"character/s in "<<word<<endl;
+    int word_length = word.length();
+    cout<<"word has : "<<word_length<<" characters "<<endl;
 
     //step4: replace 2 characters from the 3rd character with "-- $ --" . 
-
+    word.replace(2, 2, "-- $ --");
+    cout << "Replace word: " << word << endl;
 
     //step5: remove 3 characters from the end of the message. 
+    word.erase(word.length() - 3, 3);
+    cout << "Remove end characters: " << word << endl;
 
     
     return 0;
 
 }
+
 
