@@ -70,7 +70,7 @@ int main (){
     int word_length = word.length();
     cout<<"word has : "<<word_length<<" characters "<<endl;
 
-    //step4: replace 2 characters from the 3rd character with "-- $ --" . 
+    //step4: replace 2 characters from the 3rd character with ""-- $ --"" . 
     word.replace(2, 2, "-- $ --");
     cout << "Replace word: " << word << endl;
 
@@ -84,3 +84,9 @@ int main (){
 }
 
 
+// ----- Exercise Output: ---
+// word: Anter
+// 2nd character = t
+// word has : 5 characters 
+// Replace word: An-- $ --r
+// Remove end characters: An-- $ 
