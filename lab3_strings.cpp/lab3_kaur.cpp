@@ -70,13 +70,13 @@ int main (){
     int word_length = word.length();
     cout<<"word has : "<<word_length<<" characters "<<endl;
 
-    //step4: replace 2 characters from the 3rd character with ""-- $ --"" . 
+    //step4: replace 2 characters from the 3rd character with "-- $ --" . 
     word.replace(2, 2, "-- $ --");
     cout << "Replace word: " << word << endl;
 
     //step5: remove 3 characters from the end of the message. 
     word.erase(word.length() - 3, 3);
-    cout << "Remove end characters: " << word << endl;
+    cout << "Remove end characters:"<< word << endl;
 
     
     return 0;
@@ -89,4 +89,4 @@ int main (){
 // 2nd character = t
 // word has : 5 characters 
 // Replace word: An-- $ --r
-// Remove end characters: An-- $ 
+// Remove end characters: An
