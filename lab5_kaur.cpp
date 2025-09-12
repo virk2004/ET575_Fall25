@@ -39,29 +39,28 @@ int main(){
     cout<<"\n ----EXAMPLE4: if-else statement ---"<<endl;
     //absolute value
     if (n>=0){
-        cout<<n<<" is positive "<<endl;
-
+        cout<<n<<" is positive"<<endl;
     }
     else{
         cout<<n<<" is negative "<<endl;
         n*=-1;
-        cout<<n<<" The absolute value is "<<n<<endl;
+        cout<<n<<"The absolute value is "<<n<<endl;
     }
 
     cout<<"\n ----EXAMPLE5: multiway statement ---"<<endl;
     // select the color accodring to a wavelength
-    int wavelength =0;
+    int wavelength = 0;
     string emitted_color = "";
     cout<<"Enter a wavelength: ";
     cin>>wavelength;
     //multiway conditional statement
-    if (0<= wavelength<=379)
+    if (0<= wavelength && wavelength<=379)
         emitted_color = "ultraviolent";
-    else if (380 <=wavelength<=520)
+    else if (380<=wavelength && wavelength<=520)
         emitted_color = "blue";
-    else if (521<=wavelength<=590)
+    else if (521<=wavelength && wavelength<=590)
         emitted_color = "green";
-    else if (591<=wavelength<=740)
+    else if (591<=wavelength && wavelength<=740)
         emitted_color = "red";
     else if (wavelength>=741)
         emitted_color = "infrared";
@@ -71,7 +70,41 @@ int main(){
     //print result
     cout<<"The emitted color of wavelength "<<wavelength<<" is "<<emitted_color<<endl;
     
-    
+    cout<<"\n -----EXERCISE---- "<<endl;
+    // declare variables 
+    string gpa ="";
+    float final_exam = 0;
+    float labs = 0;
+    float homework = 0;
+    float grade = 0;
+
+    // collect the values for final_exam, labs, and homewok
+    cout<<"Enter Final Exam grade (0-100): ";
+    cin>>final_exam;
+    cout<<"Enter Labs grade (0-100): ";
+    cin>>labs;
+    cout<<"Enter Homework grade (0-100): ";
+    cin>>homework;
+
+    //calculate the grdae = final_exam *0.5 + labs*0.3 + homework*0.2
+    grade = final_exam *0.5 + labs *0.3 + homework *0.2;
+
+    //multiway conditional statement 
+    if (grade <=100 && grade >=90)
+        gpa = "A";
+    else if (grade <=89 && grade >=80)
+        gpa = "B";
+    else if (grade <=79 && grade >=70)
+        gpa = "C";
+    else if (grade <=69 && grade >=60)
+        gpa = "D";
+    else if (grade <60)
+        gpa = "F";
+    else
+        gpa = "";
+
+    // print result
+    cout<<"A final grade of "<<grade<<" is equivalent to a GPA of "<<gpa<<endl;
     
     return 0;
 
