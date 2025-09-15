@@ -19,26 +19,23 @@ int main() {
     getline(cin, name);
 
     // Step 3: concatenate
-    string fullMessage = part1 + part2 + name;
+    string concat = part1 + part2 + name;
 
     // Step 5: length of string
-    int length = fullMessage.length();
+    int length = concat.length();
 
     // Step 6: find "ma"
-    int index = fullMessage.find("ma");
+    int index = concat.find("ma");
 
     // Step 7: replace "ma" with "%---%"
-    string replacedMessage = fullMessage;
-    if (index != string::npos) {
-        replacedMessage.replace(index, 2, "%---%");
-    }
-
+    concat.replace(index, 2, "%---%" );
+    
     // Step 8: prompt results
     cout << "\n------------------------------ RESULT ACTIVITY 1 ----------------------------\n\n";
-    cout << "concatenated message:\t" << fullMessage << endl;
+    cout << "concatenated message:\t" << concat << endl;
     cout << "Message length:\t\t" << length << endl;
     cout << "Index of character 'ma':\t" << index << endl;
-    cout << "Replace 'ma' with %---%:\t" << replacedMessage << endl;
+    cout << "Replace 'ma' with %---%:\t" << concat << endl;
 
 
     // --------------------- ACTIVITY 2 ---------------------
