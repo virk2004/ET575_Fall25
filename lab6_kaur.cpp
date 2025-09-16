@@ -121,10 +121,71 @@ int main(){
         cout<<"Gender = UNDEFINED"<<endl;
         break;
     }
-    cout<<"\n -----EXERCISE -----"<<endl;
+    cout<<"\n -----EXERCISE 1 : Nested Conditional Statement -----"<<endl;
+    double savings;
+    cout<<"Enter your savings amount: $";
+    cin>>savings;
 
+    if (savings < 0){
+        cout<<"Have some savings!"<<endl;
+    }
+    else if (savings > 0 && savings < 200000){
+        cout<<"Keep saving!"<<endl;
+    }
+    else if (savings >= 200000 && savings <= 500000){
+        cout<<"You can afford an Apartment or Co-op."<<endl;
+        if (savings <= 300000){
+            cout<<"With $"<<savings<<" you can afford a Studio"<<endl;
+        }
+        else if (savings <= 400000){
+            cout<<"With $"<<savings<<" you can afford a 1 BR + 1 Bath"<<endl;
+        }
+        else{
+            cout<<"With $"<<savings<<" you can afford a 2 BRs + 1 Bath"<<endl;
+        }
+    }
+    else if (savings >= 500001 && savings <= 1000000){
+        cout<<"You can afford a House."<<endl;
+        if (savings <= 700000){
+            cout<<"With $"<<savings<<" you can afford a 2 BRs + 2 Baths"<<endl;
+        }
+        else{
+            cout<<"With $"<<savings<<" you can afford a 3 BRs + 3 Baths"<<endl;
+        }
+    }
+    else if (savings >= 1000001){
+        cout<<"With $"<<savings<<" you can afford a Mansion"<<endl;
+    }
+    else{
+        cout<<"Unable to classify savings."<<endl;
+    }
 
+    cout<<"\n -----EXERCISE 2 : Switch-Case Statement -----"<<endl;
+    int number = ' ';
+    char choice =' ';
+    cout<<"Enter a number: ";
+    cin>>number;
+    cout<<"Do you want to double the number? (Y/N): ";
+    cin>>choice;
+
+    switch (choice)
+    {
+    case 'y': case 'Y':
+        number = number * 2;
+        break;
+    case 'n': case 'N':
+        // keep the number unchanged
+        break;
+    default:
+        number = 0;
+        break;
+    }
+
+    cout<<"The number is set to "<<number<<endl;
 
     return 0;
 }
+
+
+    
 
