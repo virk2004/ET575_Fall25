@@ -121,6 +121,7 @@ int main(){
         cout<<"Gender = UNDEFINED"<<endl;
         break;
     }
+
     cout<<"\n -----EXERCISE 1 : Nested Conditional Statement -----"<<endl;
     double savings;
     cout<<"Enter your savings amount: $";
@@ -147,10 +148,10 @@ int main(){
     else if (savings >= 500001 && savings <= 1000000){
         cout<<"You can afford a House."<<endl;
         if (savings <= 700000){
-            cout<<"With $"<<savings<<" you can afford a 2 BRs + 2 Baths"<<endl;
+            cout<<"With $"<<savings<<" you can afford a house with 2 BRs + 2 Baths"<<endl;
         }
         else{
-            cout<<"With $"<<savings<<" you can afford a 3 BRs + 3 Baths"<<endl;
+            cout<<"With $"<<savings<<" you can afford a house with 3 BRs + 3 Baths"<<endl;
         }
     }
     else if (savings >= 1000001){
@@ -161,27 +162,30 @@ int main(){
     }
 
     cout<<"\n -----EXERCISE 2 : Switch-Case Statement -----"<<endl;
-    int number = ' ';
-    char choice =' ';
-    cout<<"Enter a number: ";
-    cin>>number;
-    cout<<"Do you want to double the number? (Y/N): ";
+    int value;
+    char choice;
+
+    cout << "Enter a number: ";
+    cin>>value;
+    cout << "Do you want to double the number? " << endl;
+    cout << "Y or y for YES" << endl;
+    cout << "N or n for NO" << endl;
     cin>>choice;
 
-    switch (choice)
+    switch (choice) 
     {
-    case 'y': case 'Y':
-        number = number * 2;
+    case 'Y': case 'y':
+        value = value * 2;   // double using assignment operator
         break;
-    case 'n': case 'N':
-        // keep the number unchanged
+    case 'N': case 'n':
+        // keep the number as is
         break;
     default:
-        number = 0;
+        value = 0;          // reset to zero
         break;
     }
 
-    cout<<"The number is set to "<<number<<endl;
+    cout << "The number is set to " << value << endl;
 
     return 0;
 }
