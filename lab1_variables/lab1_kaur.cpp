@@ -1,5 +1,5 @@
 /*
-Student's full name:Anterpreet Kaur
+Anterpreet Kaur
 Aug 27, 2025
 Lab 1, iostream 
 */
