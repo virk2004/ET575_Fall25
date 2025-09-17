@@ -122,40 +122,37 @@ int main(){
         break;
     }
 
-    cout<<"\n -----EXERCISE 1 : Nested Conditional Statement -----"<<endl;
-    double savings;
-    cout<<"Enter your savings amount: $";
-    cin>>savings;
+    cout<<"\n -----EXERCISE 1: Nested Conditional Statement -----"<<endl;
+    double amount;
+    cout<<"Enter the amount of money on savings: $";
+    cin>>amount;
 
-    if (savings < 0){
-        cout<<"Have some savings!"<<endl;
-    }
-    else if (savings > 0 && savings < 200000){
-        cout<<"Keep saving!"<<endl;
-    }
-    else if (savings >= 200000 && savings <= 500000){
-        cout<<"You can afford an Apartment or Co-op."<<endl;
-        if (savings <= 300000){
-            cout<<"With $"<<savings<<" you can afford a Studio"<<endl;
+    // nested if for 200k-500k
+    if (amount>= 200000 && amount <= 500000){
+        cout<<" with $ " <<amount<< "You can afford an Apartment or Co-op."<<endl;
+        if (amount <= 300000){
+            cout<<"With $"<<amount<<" you can afford a Studio"<<endl;
         }
-        else if (savings <= 400000){
-            cout<<"With $"<<savings<<" you can afford a 1 BR + 1 Bath"<<endl;
+        else if (amount <= 400000){
+            cout<<"With $"<<amount<<" you can afford a 1 BR + 1 Bath"<<endl;
         }
         else{
-            cout<<"With $"<<savings<<" you can afford a 2 BRs + 1 Bath"<<endl;
+            cout<<"With $"<<amount<<" you can afford a 2 BRs + 1 Bath"<<endl;
         }
     }
-    else if (savings >= 500001 && savings <= 1000000){
+    else if (amount >= 500001 && amount <= 1000000){
         cout<<"You can afford a House."<<endl;
-        if (savings <= 700000){
-            cout<<"With $"<<savings<<" you can afford a house with 2 BRs + 2 Baths"<<endl;
+
+        if (amount <= 700000){
+            cout<<"With $"<<amount<<" you can afford a house with 2 BRs + 2 Baths"<<endl;
         }
         else{
-            cout<<"With $"<<savings<<" you can afford a house with 3 BRs + 3 Baths"<<endl;
+            cout<<"With $"<<amount<<" you can afford a house with 3 BRs + 3 Baths"<<endl;
         }
     }
-    else if (savings >= 1000001){
-        cout<<"With $"<<savings<<" you can afford a Mansion"<<endl;
+    else if (amount >= 1000001){
+        //above 1m
+        cout<<"With $"<<amount<<" you can afford a Mansion"<<endl;
     }
     else{
         cout<<"Unable to classify savings."<<endl;
@@ -164,22 +161,28 @@ int main(){
     cout<<"\n -----EXERCISE 2 : Switch-Case Statement -----"<<endl;
     int value;
     char choice;
-
+    //ask for a number
     cout << "Enter a number: ";
     cin>>value;
-    cout << "Do you want to double the number? " << endl;
+
+    //ask if they want to double the number
+    cout << "Do you want to double the number? (Y/N): ";
+    cin>>choice;
+
     cout << "Y or y for YES" << endl;
     cout << "N or n for NO" << endl;
-    cin>>choice;
+    
 
     switch (choice) 
     {
     case 'Y': case 'y':
         value = value * 2;   // double using assignment operator
         break;
+        
     case 'N': case 'n':
         // keep the number as is
         break;
+
     default:
         value = 0;          // reset to zero
         break;
