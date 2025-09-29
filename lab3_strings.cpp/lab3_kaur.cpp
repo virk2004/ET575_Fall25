@@ -58,9 +58,8 @@ int main (){
 
     cout<<"\n----- Exercise: ---"<<endl;
     //step1: ask to for "word"
-    string word = "";
-    cout<<"word: ";
-
+    string word;
+    cout<<"type word:"<<word;
     cin>>word;
 
     //step2: print 2nd character
