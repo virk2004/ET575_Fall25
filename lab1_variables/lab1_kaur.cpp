@@ -1,7 +1,8 @@
 /*
-Anterpreet Kaur
-Aug 27, 2025
+Anterpreet Kaurr
+August 27, 2025
 Lab 1, iostream 
+
 */
 #include <iostream>
 using namespace std;
@@ -39,6 +40,7 @@ int main()
 
     // collect data
     cout << "Enter country: ";
+
     cin >> country;
 
     cout << "Enter gender (f=Female, m=Male, o=Other): ";
