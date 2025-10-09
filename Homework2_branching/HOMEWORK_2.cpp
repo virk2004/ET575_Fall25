@@ -96,7 +96,8 @@ int main() {
 #include <iostream>
 using namespace std;
 
-int main() {
+int main() 
+{
     // ---------------- Program 1: Age eligibility ---------------- //
     int age;
 
