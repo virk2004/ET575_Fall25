@@ -1,7 +1,7 @@
 /*
 ANTERPREET KAUR
 Lab2, operators
-Sep 3, 2025
+September 3 rd, 2025
 */
 #include<iostream>
 using namespace std;
