@@ -61,33 +61,34 @@ int main(){
     //PRINT RESULTS:
     cout<<"The total sum of negative umbers = "<<sum_negative<<endl;
 
-
-
-    /* -------------------------------------------------------------------------------------- */
-
-    // EXERCISE 1:
+    /* ----------------------------------------------- */
 
     cout<<"\n ----------EXERCISE 1:------------"<<endl;
     // print from 21 to -21
-    int n ;
-    for (int n= 21; n<=-21; n-=5){
-        if (n%2==0 ){
+    int count_multiplesof_2 = 0;
 
+    for (int i = 21; i >= -21; i -= 5) {
+        cout << i << "\t";
+        if (i % 2 == 0) {
+            count_multiplesof_2++;
         }
-        cout<<n<<"\t"<<endl;
-    
-    cout<<"\n ----------EXERCISE 2:------------"<<endl;
-    int start_value;
-    cout<<"input the start:";
-    cin>>start_value;
-    for(int i = start_value; i<=30;  i+=4){
-        cout<<i<<"\t"<<endl;
     }
 
-
-
-
+    cout<< endl<< "There are " << count_multiplesof_2 << " numbers that are multiples of 2." << endl;
+   
     
+    cout<<"\n ----------EXERCISE 2:------------"<<endl;
+
+    int start_value;
+    cout<< "input the starting value:";
+    cin>>start_value;
+    cout<< "Counting from " <<start_value<<" upto 30 (step = +4):"<<endl;
+
+    for(int i = start_value; i<=30;  i+=4){
+        cout<<i<<"\t";
+    }
+    cout<<endl;
+
 
 
 
