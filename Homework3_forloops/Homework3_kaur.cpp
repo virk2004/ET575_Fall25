@@ -1,7 +1,7 @@
 /*
-Student's full name
+Anterpreet kaur
 Homework 3 - for loop
-Program 1
+Program 1&2
 */
 
 #include <iostream>
