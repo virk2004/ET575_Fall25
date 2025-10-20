@@ -49,30 +49,20 @@ int main() {
     cout << endl;
 
     cout<<"\n----- QUESTION:3 -----"<<endl;
-    int dimension = 11; // global variable
-
-    for (int i = 0; i < dimension; i++) {       // loop through rows
-        for (int j = 0; j < dimension; j++) {   // loop through columns
-            
-            // draw the letter 'r'
-            if (
-                (i == 3 && j >= 4 && j <= 8) ||       // top horizontal line
-                (i == 4 && j >= 4 && j <= 8) ||       // second horizontal line
-                (j == 4 && i >= 3)   ||               // left vertical
-                (j == 5 && i >= 5 && i <= 6) ||       // upper right vertical leg
-                (j == 6 && i == 7)     ||             // diagonal start
-                (j == 7 && i == 8)     ||             // diagonal middle
-                (j == 8 && i == 9)     ||             // diagonal lower
-                (j == 9 && i == 10)                   // diagonal bottom
-            )
-                cout << "# ";
-            else
-                cout << ". ";
+    const int DIM = 11;
+    for (int i = 0; i < DIM; i++) {
+        for (int j = 0; j < DIM; j++) {
+            if ((i == 2 && (j == 3 || j == 4)) ||
+                ((i == 3 || i == 4) && j >= 3 && j <= 7) ||
+                (i >= 5 && i <= 9 && (j == 3 || j == 4)))
+            {
+                cout << "#";
+            } else {
+                cout << ".";
+            }
         }
         cout << endl;
     }
-
+    
     return 0;
 }
-
-    
