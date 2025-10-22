@@ -89,7 +89,43 @@ int main() {
     cout << "5. Exit\n ";
     cin >> choice;
 
-    return 0;
+    switch (choice) {
+        case 1:
+            cout << "Enter temperature in Celsius: ";
+            cin >> temperature;
+            result = (temperature * 9.0 / 5.0) + 32;
+            cout << temperature << " Celsius is equal to " << result << " Fahrenheit" << endl;
+            break;
 
+        case 2:
+            cout << "Enter temperature in Fahrenheit: ";
+            cin >> temperature;
+            result = (temperature - 32) * 5.0 / 9.0;
+            cout << temperature << " Fahrenheit is equal to " << result << " Celsius" << endl;
+            break;
+
+        case 3:
+            cout << "Enter temperature in Kelvin: ";
+            cin >> temperature;
+            result = temperature - 273.15;
+            cout << temperature << " Kelvin is equal to " << result << " Celsius" << endl;
+            break;
+
+        case 4:
+            cout << "Enter temperature in Kelvin: ";
+            cin >> temperature;
+            result = (temperature - 273.15) * 9.0 / 5.0 + 32;
+            cout << temperature << " Kelvin is equal to " << result << " Fahrenheit" << endl;
+            break;
+
+        case 5:
+            cout << "Exiting program. Goodbye!" << endl;
+            break;
+
+        default:
+            cout << "Invalid selection. Please enter a number between 1 and 5." << endl;
+            break;
+    }
+
+    return 0;
 }
-    
