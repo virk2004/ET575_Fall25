@@ -2,9 +2,10 @@
 Anterpreet Kaurr
 OCT 22ND, 2025
 Lab 11 Functions
-
 */
+
 #include <iostream>
+
 using namespace std;
 
 // void function does not return any value
@@ -41,7 +42,7 @@ int somenumber(){
         return area;
     }
 
-    //eXAMPLE6:
+    //Example6:
     int product(int n1, int n2){
         return n1 * n2;
 
@@ -75,4 +76,17 @@ int somenumber(){
         cout<<"The number is" <<x<< "is" <<n<< endl;
     }
     
-    // Exercise 
+    // Exercise--Function 1: check if a number is even (returns bool)
+    bool isEven(int number){
+        if (number % 2 == 0){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    //Function 2: Print the result
+    void printEvenResult(int number, bool result){
+        cout<<" Is "<< number <<" even? : "<< boolalpha << result << endl;
+    }
