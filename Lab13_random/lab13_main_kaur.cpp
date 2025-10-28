@@ -1,7 +1,7 @@
 /*
 ANTERPREET KAUR
 OCT 27TH, 2025
-LAB13: RANDOM VARIABLES
+LAB13(MAIN): RANDOM VARIABLES
 */
 
 #include <iostream>
@@ -32,26 +32,13 @@ int main(){
     //call function that generates a num between 1 and 6
     int run1 = random_1_6();
     int run2 = random_1_6();
+    cout << "Dice 1: " << run1 << ", Dice 2: " << run2 << endl;
 
     //call function to check for snake_eyes
     bool result = compare_ones(run1, run2);
 
     //call function to print result
     printresult(result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     return 0;
 

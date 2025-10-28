@@ -1,7 +1,7 @@
 /*
 ANTERPREET KAUR
 OCT 27TH, 2025
-LAB13: RANDOM VARIABLES
+LAB13(FUNCTION): RANDOM VARIABLES
 */
 
 #include <iostream>
@@ -37,12 +37,19 @@ int random_neg10_5(){
 //EXERCISE: ROLLING A DICE
 // function that generates a random number between 1 and 6
 int random_1_6(){
+    return 1 + rand() % 6;
 }
 
 //function to compare if 2 numbers are 1s
 bool compare_ones(int r1, int r2){
+    return (r1 == 1 && r2 == 1);
 }
 
 //function to prompt result
 void printresult (bool result){
+    if(result){
+        cout << "Congrats! You got a snake eyes" << endl;
+    } else {
+        cout << "Better luck next time" << endl;
+    }
 }
