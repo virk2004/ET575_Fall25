@@ -50,4 +50,5 @@ double windspeed(int v, float tem) {
 
 void prompt_result(double wci) {
     cout << "The wind chill index is: " << wci << endl;
+    
 }
