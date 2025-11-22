@@ -65,15 +65,12 @@ int search(const int *arr, int numberuserindex, int target)
     else
         return -1;
 }
-
-
 // Print result of search
 void printresult(int resultsearch, int target)
 {
     cout << "Is " << target << " in the array? " << resultsearch << endl;
 }
 // ========== LAB EXERCISE ===============
-
 // 1) Sum of all even numbers
 int sumEven(const int arr[], int size)
 {
