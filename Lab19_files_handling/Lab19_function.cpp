@@ -1,3 +1,9 @@
+/*
+* Student's Full Name: Anterpreet Kaur
+* Lab Number: 19
+* Nov 24, 2025
+* Lab 19, files and console input
+ */
 #include <iostream>
 #include <fstream>
 #include <string>
