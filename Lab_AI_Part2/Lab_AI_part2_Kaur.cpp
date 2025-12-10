@@ -8,34 +8,63 @@ OCTOBER 16TH, 2025
 using namespace std;
 
 int main() {
-    int choice;
-    double celsius, fahrenheit;
+// Declare variables
+double celsius, fahrenheit;
+int choice;
 
-    cout << "Choose conversion type:\n";
-    cout << "1. Celsius to Fahrenheit\n";
-    cout << "2. Fahrenheit to Celsius\n";
-    cout << "Enter choice: ";
-    cin >> choice;
+// Display conversion menu
+cout << "Choose conversion type:\n";
+cout << "1. Celsius to Fahrenheit\n";
+cout << "2. Fahrenheit to Celsius\n";
+cout << "Enter choice: ";
+cin >> choice; // User selects which conversion to perform
 
-    if (choice == 1) {
-        cout << "Enter temperature in Celsius: ";
-        cin >> celsius;
-        fahrenheit = (1.8 * celsius) + 32;
-        cout << celsius << "°C is " << fahrenheit << "°F" << endl;
-    } 
-    else if (choice == 2) {
-        cout << "Enter temperature in Fahrenheit: ";
-        cin >> fahrenheit;
-        celsius = (5.0 / 9.0) * (fahrenheit - 32);
-        cout << fahrenheit << "°F is " << celsius << "°C" << endl;
-    } 
-    else {
-        cout << "Invalid choice. Please run the program again." << endl;
-    }
+// If the user chooses Celsius → Fahrenheit
+if (choice == 1) {
+cout << "\nEnter temperature in Celsius: ";
+cin >> celsius; // Get Celsius value from user
 
-    return 0;
+// Convert Celsius to Fahrenheit using formula: (1.8 * C) + 32
+fahrenheit = (1.8 * celsius) + 32;
+// Display result
+cout << "\n" << celsius << "°C is " << fahrenheit << "°F\n";
+
+// ----- Example 1 -----
+// Input:
+//   Enter choice: 1
+//   Enter temperature in Celsius: 25
+// Output:
+//   25.0°C is 77.0°F
 }
 
+// If the user chooses Fahrenheit → Celsius
+else if (choice == 2) {
+cout << "\nEnter temperature in Fahrenheit: ";
+cin >> fahrenheit; // Get Fahrenheit value from user
+
+// Convert Fahrenheit to Celsius using formula: (5.0 / 9.0) * (F - 32)
+celsius = (5.0 / 9.0) * (fahrenheit - 32);
+
+// Display result
+cout << "\n" << fahrenheit << "°F is " << celsius << "°C\n";
+
+
+
+
+// ----- Example 2 -----
+// Input:
+//   Enter choice: 2
+//   Enter temperature in Fahrenheit: 98.6
+// Output:
+//   98.6°F is 37.0°C
+}
+// If user enters anything other than 1 or 2
+else {
+cout << "\nInvalid choice! Please restart the program.\n";
+    }
+
+return 0; // End of program
+}
 
 
 
