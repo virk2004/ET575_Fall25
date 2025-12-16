@@ -4,14 +4,19 @@ LAB14
 NOV 12, 2025
 */
 #include <iostream>
+
 using namespace std;
+
 #include "lab14_function_kaur.cpp"
 
 int main() {
     cout <<"-----Example1: Pointers-----"<< endl; 
+
     pointer_ref();
 
+
     cout << "\n------ Example 2: pointers and reference in a function --------" << endl;
+
     string something = "Hello World!";
     printvalue(something);
     printreference(something);
@@ -24,12 +29,11 @@ int main() {
     cout << "\n------ Example 4: sizeof arrays --------" << endl;
     sizeofarrays();
 
+     cout << "\n------ Example 5: loop in an array ------" << endl;
+    looparray();
 
-
-
-
-
-
+    cout << "\n------ Lab Exercise: find maximum score ------" << endl;
+    labexercise();
 
     return 0;
 }
